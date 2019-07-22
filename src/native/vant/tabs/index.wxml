@@ -16,9 +16,9 @@
         <view
           wx:for="{{ tabs }}"
           wx:key="index"
-          data-index="{{ Index }}"
-          class="van-ellipsis tab-class {{ Index === active ? 'tab-active-class' : '' }} {{ utils.bem('tab', { active: Index === active, disabled: item.disabled }) }}"
-          style="{{ color && Index !== active && type === 'card' && !item.disabled ? 'color: ' + color : '' }} {{ color && Index === active && type === 'card' ? ';background-color:' + color : '' }} {{ color ? ';border-color: ' + color : '' }} {{ scrollable ? ';flex-basis:' + (88 / swipeThreshold) + '%' : '' }}"
+          data-index="{{ index }}"
+          class="van-ellipsis tab-class {{ index === active ? 'tab-active-class' : '' }} {{ utils.bem('tab', { active: index === active, disabled: item.disabled }) }}"
+          style="{{ color && index !== active && type === 'card' && !item.disabled ? 'color: ' + color : '' }} {{ color && index === active && type === 'card' ? ';background-color:' + color : '' }} {{ color ? ';border-color: ' + color : '' }} {{ scrollable ? ';flex-basis:' + (88 / swipeThreshold) + '%' : '' }}"
           bind:tap="onTap"
         >
           <view class="van-ellipsis {{ utils.bem('tab__title', { dot: item.dot }) }}" style="{{ item.titleStyle }}">

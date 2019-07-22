@@ -26,7 +26,7 @@
       open-type="{{ item.openType }}"
       class="{{ utils.bem('action-sheet__item', { disabled: item.disabled || item.loading }) }} van-hairline--top {{ item.className || '' }}"
       hover-class="van-action-sheet__item--hover"
-      data-index="{{ Index }}"
+      data-index="{{ index }}"
       bind:tap="onSelect"
     >
       <block wx:if="{{ !item.loading }}">

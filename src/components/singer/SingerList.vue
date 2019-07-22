@@ -125,9 +125,6 @@
 <style scoped lang="scss">
   .wrapper {
     .w-content {
-      margin-top: 20rpx;
-      padding-top: 20rpx;
-
       .title {
         color: #ccc;
         font-size: 28rpx;
@@ -162,8 +159,13 @@
   }
   .l-container {
     position: fixed;
-    top: 120rpx;
+    top: 86rpx;
     width: 100%;
+    z-index: 100;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    /*margin: 0 40rpx;*/
     .letter {
       position: relative;
       top: -10rpx;
@@ -176,6 +178,12 @@
           text-align: center;
           &:nth-child(2) {
             margin-left: 6rpx;
+          }
+          &:first-child {
+            margin-left: 40rpx;
+          }
+          &:last-child {
+            padding-right: 40rpx;
           }
         }
       }

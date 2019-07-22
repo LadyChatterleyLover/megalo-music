@@ -34,8 +34,8 @@
     <picker-column
       class="van-picker__column"
       wx:for="{{ isSimple(columns) ? [columns] : columns }}"
-      wx:key="{{ Index }}"
-      data-index="{{ Index }}"
+      wx:key="{{ index }}"
+      data-index="{{ index }}"
       custom-class="column-class"
       value-key="{{ valueKey }}"
       initial-options="{{ isSimple(columns) ? item : item.values }}"

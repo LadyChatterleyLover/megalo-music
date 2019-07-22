@@ -69,23 +69,38 @@
       }
     },
     methods: {
-      back () {
-        this.$router.back()
-      },
       goToPlay(item, index) {
-        console.log(item)
-        // this.$router.push({name: 'player', params: {item: item,index: index, songs: this.songs}})
+        let name = item.name
+        let detailId = this.detailItem.id
+        let id = item.id
+        let alId = item.al.id
+        let url = `../player/index?id=${id}&alId=${alId}&detailId=${detailId}&index=${index}&name=${name}`
+        wx.navigateTo({
+          url
+        })
       },
       playAll () {
         let index = parseInt(Math.random() * this.songs.length)
         let item = this.songs[index]
+        let url = `../player/index?item=${item}&index=${index}&songs=${this.songs}`
+        wx.navigateTo({
+          url
+        })
         // this.$router.push({name: 'player', params: {item: item,index: index, songs: this.songs}})
       }
     },
     mounted() {
+      wx.showLoading({
+        title: '加载中...'
+      })
       this.$fly.get(`/artists?id=${this.detailItem.id}`).then(res => {
-        console.log(res)
-        this.songs = res.data.hotSongs
+        if (res.data) {
+          wx.hideLoading()
+          this.songs = res.data.hotSongs
+        }
+      }).catch(err => {
+        console.log(err)
+        wx.hideLoading()
       })
     },
     created() {

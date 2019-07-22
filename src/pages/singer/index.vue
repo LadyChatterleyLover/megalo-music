@@ -84,58 +84,57 @@
       }
     },
     methods: {
-      clickTab (index) {
-        console.log(index)
-        // let index = e.mp.detail.Index
-        // this.active = index
-        // if (index === 0) {
-        //   this.cat = 5001
-        // }
-        // if (index === 1) {
-        //   this.cat = 1001
-        // }
-        // if (index === 2) {
-        //   this.cat = 1002
-        // }
-        // if (index === 3) {
-        //   this.cat = 1003
-        // }
-        // if (index === 4) {
-        //   this.cat = 2001
-        // }
-        // if (index === 5) {
-        //   this.cat = 2002
-        // }
-        // if (index === 6) {
-        //   this.cat = 2003
-        // }
-        // if (index === 7) {
-        //   this.cat = 6001
-        // }
-        // if (index === 8) {
-        //   this.cat = 6002
-        // }
-        // if (index === 9) {
-        //   this.cat = 6003
-        // }
-        // if (index === 10) {
-        //   this.cat = 7001
-        // }
-        // if (index === 11) {
-        //   this.cat = 7002
-        // }
-        // if (index === 12) {
-        //   this.cat = 7003
-        // }
-        // if (index === 13) {
-        //   this.cat = 4001
-        // }
-        // if (index === 14) {
-        //   this.cat = 4002
-        // }
-        // if (index === 15) {
-        //   this.cat = 4003
-        // }
+      clickTab (e) {
+        let index = e.detail.index
+        this.active = index
+        if (index === 0) {
+          this.cat = 5001
+        }
+        if (index === 1) {
+          this.cat = 1001
+        }
+        if (index === 2) {
+          this.cat = 1002
+        }
+        if (index === 3) {
+          this.cat = 1003
+        }
+        if (index === 4) {
+          this.cat = 2001
+        }
+        if (index === 5) {
+          this.cat = 2002
+        }
+        if (index === 6) {
+          this.cat = 2003
+        }
+        if (index === 7) {
+          this.cat = 6001
+        }
+        if (index === 8) {
+          this.cat = 6002
+        }
+        if (index === 9) {
+          this.cat = 6003
+        }
+        if (index === 10) {
+          this.cat = 7001
+        }
+        if (index === 11) {
+          this.cat = 7002
+        }
+        if (index === 12) {
+          this.cat = 7003
+        }
+        if (index === 13) {
+          this.cat = 4001
+        }
+        if (index === 14) {
+          this.cat = 4002
+        }
+        if (index === 15) {
+          this.cat = 4003
+        }
       }
     },
     onReachBottom () {

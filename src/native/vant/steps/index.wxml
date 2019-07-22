@@ -5,17 +5,17 @@
     <view
       wx:for="{{ steps }}"
       wx:key="index"
-      class="{{ utils.bem('step', [direction, status(Index, active)]) }} van-hairline"
+      class="{{ utils.bem('step', [direction, status(index, active)]) }} van-hairline"
     >
-      <view class="van-step__title" style="{{ Index === active ? 'color: ' + activeColor : '' }}">
+      <view class="van-step__title" style="{{ index === active ? 'color: ' + activeColor : '' }}">
         <view>{{ item.text }}</view>
         <view>{{ item.desc }}</view>
       </view>
       <view class="van-step__circle-container">
-        <view class="van-step__circle" wx:if="{{ Index !== active }}" style="{{ Index < active ? 'background-color: ' + activeColor : '' }}" />
+        <view class="van-step__circle" wx:if="{{ index !== active }}" style="{{ index < active ? 'background-color: ' + activeColor : '' }}" />
         <van-icon wx:else name="checked" color="{{ activeColor }}" custom-class="van-step__active" />
       </view>
-      <view wx:if="{{ Index !== steps.length - 1 }}" class="van-step__line" style="{{ Index < active ? 'background-color: ' + activeColor : '' }}" />
+      <view wx:if="{{ index !== steps.length - 1 }}" class="van-step__line" style="{{ index < active ? 'background-color: ' + activeColor : '' }}" />
     </view>
   </view>
 </view>

@@ -8,8 +8,8 @@
     <view
       wx:for="{{ items }}"
       wx:key="index"
-      class="van-ellipsis main-item-class {{ utils.bem('tree-select__nitem', { active: mainActiveIndex === Index, disabled: item.disabled }) }} {{ mainActiveIndex === Index ? 'main-active-class' : '' }} {{ item.disabled ? 'main-disabled-class' : '' }}"
-      data-index="{{ Index }}"
+      class="van-ellipsis main-item-class {{ utils.bem('tree-select__nitem', { active: mainActiveIndex === index, disabled: item.disabled }) }} {{ mainActiveIndex === index ? 'main-active-class' : '' }} {{ item.disabled ? 'main-disabled-class' : '' }}"
+      data-index="{{ index }}"
       bind:tap="onClickNav"
     >
       {{ item.text }}

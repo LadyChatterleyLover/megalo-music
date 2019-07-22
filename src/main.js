@@ -34,6 +34,7 @@ export default {
       "pages/singerDetail/index",
       "pages/register/index",
       "pages/login/index",
+      "pages/player/index"
       // "pages/edit/index"
     ],
     tabBar: {
