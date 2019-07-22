@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/singer/main",
+    "pages/me/main",
+    "pages/searchList/main",
+    "pages/singDetail/main",
+    "pages/register/main",
+    "pages/login/main",
+    "pages/edit/main"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#c10d0d",
+    "navigationBarTitleText": "网易云音乐",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#333",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/main",
+        "iconPath": "static/tabs/home.png",
+        "selectedIconPath": "static/tabs/home-active.png"
+      },
+      {
+        "text": "歌手",
+        "pagePath": "pages/singer/main",
+        "iconPath": "static/tabs/singer.png",
+        "selectedIconPath": "static/tabs/singer-active.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/me/main",
+        "iconPath": "static/tabs/me.png",
+        "selectedIconPath": "static/tabs/me-active.png"
+      }
+    ],
+    "position": "bottom"
+  }
+}

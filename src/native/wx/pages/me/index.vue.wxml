@@ -1,0 +1,10 @@
+<template name="30ca5ea8">
+  <view class="_div data-v-6a059349 me">
+    <view class="_div data-v-6a059349 no-login">
+      <view class="_div data-v-6a059349 n-desc"> 您还没有登录喔 </view>
+      <view class="_div data-v-6a059349">
+        <van-button type="info" size="small" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-button data-v-6a059349">立即登录</van-button>
+      </view>
+    </view>
+  </view>
+</template>

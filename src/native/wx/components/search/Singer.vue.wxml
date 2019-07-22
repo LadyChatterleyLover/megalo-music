@@ -1,0 +1,18 @@
+<template name="0834d168">
+  <view class="_div data-v-3f8436ad">
+    <view class="_div data-v-3f8436ad content">
+      <view class="_div data-v-3f8436ad flex" wx:if="{{singer.length === 0}}">无结果</view>
+      <view wx:else class="_div data-v-3f8436ad">
+        <view wx:key="index" key="{{index}}" class="_div data-v-3f8436ad item" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{singer}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-3f8436ad img">
+            <image src="{{item.img1v1Url}}" alt class="_img data-v-3f8436ad"></image>
+          </view>
+          <rich-text class="_div data-v-3f8436ad name" nodes="{{item.name}}"></rich-text>
+          <view class="_div data-v-3f8436ad alias">
+            <view wx:key="index1" key="{{index1}}" wx:for="{{item.alias}}" wx:for-index="index1" wx:for-item="item1" class="_div data-v-3f8436ad"> ({{item1}}) </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

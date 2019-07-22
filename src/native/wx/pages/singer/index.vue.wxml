@@ -1,0 +1,22 @@
+<import src="/components/singer/SingerList.vue.wxml" /><template name="28c4c50c">
+  <view class="_div data-v-3222c12d">
+    <van-tabs active="{{active}}" animated="{{true}}" sticky="{{true}}" bindchange="handleProxy" data-eventid="{{'12'}}" data-comkey="{{$k}}" class="_van-tabs data-v-3222c12d">
+      <van-tab title="入驻歌手" class="_van-tab data-v-3222c12d"><template wx:if="{{active===0}}" data="{{...$root[$kk+'0'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="华语男歌手" class="_van-tab data-v-3222c12d"><template wx:if="{{active===1}}" data="{{...$root[$kk+'2'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="华语女歌手" class="_van-tab data-v-3222c12d"><template wx:if="{{active===2}}" data="{{...$root[$kk+'4'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="华语组合/乐队" class="_van-tab data-v-3222c12d"><template wx:if="{{active===3}}" data-eventid="{{'0'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'6'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="欧美男歌手" class="_van-tab data-v-3222c12d"><template wx:if="{{active===4}}" data-eventid="{{'1'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'8'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="欧美女歌手 " class="_van-tab data-v-3222c12d"><template wx:if="{{active===5}}" data-eventid="{{'2'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'10'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="欧美组合" class="_van-tab data-v-3222c12d"><template wx:if="{{active===6}}" data-eventid="{{'3'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'12'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="日本男歌手" class="_van-tab data-v-3222c12d"><template wx:if="{{active===7}}" data-eventid="{{'4'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'14'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="日本女歌手" class="_van-tab data-v-3222c12d"><template wx:if="{{active===8}}" data-eventid="{{'5'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'16'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="日本组合/乐队" class="_van-tab data-v-3222c12d"><template wx:if="{{active===9}}" data-eventid="{{'6'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'18'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="韩国男歌手" class="_van-tab data-v-3222c12d"><template wx:if="{{active===10}}" data-eventid="{{'7'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'20'], $root}}" is="5e93b2b6"></template>/van-tab> </van-tab>
+      <van-tab title="韩国女歌手" class="_van-tab data-v-3222c12d"><template wx:if="{{active===11}}" data-eventid="{{'8'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'22'], $root}}" is="5e93b2b6"></template>/van-tab> </van-tab>
+      <van-tab title="韩国组合/乐队" class="_van-tab data-v-3222c12d"><template wx:if="{{active===12}}" data="{{...$root[$kk+'24'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="其他男歌手" class="_van-tab data-v-3222c12d"><template wx:if="{{active===13}}" data-eventid="{{'9'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'26'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="其他女歌手" class="_van-tab data-v-3222c12d"><template wx:if="{{active===14}}" data-eventid="{{'10'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'28'], $root}}" is="5e93b2b6"></template></van-tab>
+      <van-tab title="其他组合" class="_van-tab data-v-3222c12d"><template wx:if="{{active===15}}" data-eventid="{{'11'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'30'], $root}}" is="5e93b2b6"></template></van-tab>
+    </van-tabs>
+  </view>
+</template>

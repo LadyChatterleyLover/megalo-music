@@ -1,0 +1,27 @@
+<template name="5e93b2b6">
+  <view class="_div data-v-6921b997">
+    <view ref="wrapper" class="_div data-v-6921b997 wrapper">
+      <view class="_div data-v-6921b997 w-content {{[active !== 0 ? 'pad' : '']}}">
+        <view class="_div data-v-6921b997 item" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-6921b997 img">
+            <image src="{{item.picUrl}}" alt class="_img data-v-6921b997"></image>
+          </view>
+          <view class="_div data-v-6921b997 name">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-6921b997 l-container">
+      <scroll-view scroll-x class="_scroll-view data-v-6921b997 letter" wx:if="{{active > 0}}">
+        <view class="_div data-v-6921b997 l-content">
+          <view class="_div data-v-6921b997 l-item {{[index === activeIndex ? 'active' : '']}}" wx:key="index" key="{{index}}" wx:for="{{letters}}" wx:for-index="index" wx:for-item="item">
+            <view bindtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}" class="_div data-v-6921b997">
+              {{item}}
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,9 @@
+
+.login .desc.data-v-3ef95aee {
+  margin-top: 40rpx;
+}
+.login .btn.data-v-3ef95aee {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100rpx;
+}

@@ -1,0 +1,32 @@
+<template name="2e27df2f">
+  <view class="_div data-v-3ef95aee login">
+    <view class="_div data-v-3ef95aee tab">
+      <van-tabs active="{{active}}" class="_van-tabs data-v-3ef95aee">
+        <van-tab title="手机号登录" class="_van-tab data-v-3ef95aee">
+          <view class="_div data-v-3ef95aee desc">
+            <van-cell-group class="_van-cell-group data-v-3ef95aee">
+              <van-field type="tel" left-icon="phone-o" label="手机号" required clearable placeholder="请输入手机号" value="{{phone}}" bindblur="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-field data-v-3ef95aee"></van-field>
+              <van-field type="password" value="{{password}}" label="密码" left-icon="manager-o" required clearable placeholder="请输入密码" bindblur="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_van-field data-v-3ef95aee"></van-field>
+            </van-cell-group>
+          </view>
+          <view class="_div data-v-3ef95aee btn">
+            <van-button type="danger" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_van-button data-v-3ef95aee">立即登录</van-button>
+            <van-button type="warning" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_van-button data-v-3ef95aee">立即注册</van-button>
+          </view>
+        </van-tab>
+        <van-tab title="邮箱登录" class="_van-tab data-v-3ef95aee">
+          <view class="_div data-v-3ef95aee desc">
+            <van-cell-group class="_van-cell-group data-v-3ef95aee">
+              <van-field type="email" left-icon="phone-o" value="{{email}}" label="邮箱" required clearable placeholder="请输入网易邮箱" bindblur="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_van-field data-v-3ef95aee"></van-field>
+              <van-field type="password" value="{{password2}}" label="密码" left-icon="envelop-o" required clearable placeholder="请输入密码" bindblur="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_van-field data-v-3ef95aee"></van-field>
+            </van-cell-group>
+          </view>
+          <view class="_div data-v-3ef95aee btn">
+            <van-button type="danger" bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_van-button data-v-3ef95aee">立即登录</van-button>
+            <van-button type="warning" bindtap="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_van-button data-v-3ef95aee">立即注册</van-button>
+          </view>
+        </van-tab>
+      </van-tabs>
+    </view>
+  </view>
+</template>

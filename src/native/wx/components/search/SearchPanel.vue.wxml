@@ -1,0 +1,19 @@
+<template name="d83014c8">
+  <view class="_div data-v-49ca6a4a home">
+    <view class="_div data-v-49ca6a4a content">
+      <view class="_div data-v-49ca6a4a value" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}"> 搜索 "{{value}}" </view>
+      <view class="_div data-v-49ca6a4a line"></view>
+      <view wx:key="item.keyword" key="{{item.keyword}}" wx:for="{{searchRank}}" wx:for-index="index" wx:for-item="item" class="_div data-v-49ca6a4a">
+        <view class="_div data-v-49ca6a4a item" bindtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}">
+          <view class="_div data-v-49ca6a4a search">
+            <van-icon name="search" class="_van-icon data-v-49ca6a4a"></van-icon>
+          </view>
+          <view class="_div data-v-49ca6a4a">
+            {{item.keyword}}
+          </view>
+        </view>
+        <view class="_div data-v-49ca6a4a line"></view>
+      </view>
+    </view>
+  </view>
+</template>

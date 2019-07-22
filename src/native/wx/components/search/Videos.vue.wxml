@@ -1,0 +1,42 @@
+<template name="71484128">
+  <view class="_div data-v-96323eee">
+    <view class="_div data-v-96323eee content">
+      <view class="_div data-v-96323eee flex" wx:if="{{videos.length === 0}}">无结果</view>
+      <view wx:else class="_div data-v-96323eee">
+        <view class="_div data-v-96323eee item" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{videos}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-96323eee i-con">
+            <view class="_div data-v-96323eee img">
+              <image src="{{item.coverUrl}}" alt class="_img data-v-96323eee"></image>
+            </view>
+            <view class="_div data-v-96323eee play">
+              <view class="_div data-v-96323eee icon">
+                <van-icon name="play" color class="_van-icon data-v-96323eee"></van-icon>
+              </view>
+              <view class="_div data-v-96323eee"><label wx:if="{{item.playTime > 100000}}" class="_span data-v-96323eee">
+                  {{item.playTime | toFiexd}}万 </label><label wx:else class="_span data-v-96323eee">
+                  {{item.playTime}}
+                </label></view>
+            </view>
+          </view>
+          <view class="_div data-v-96323eee desc">
+            <view class="_div data-v-96323eee name">
+              <view class="_div data-v-96323eee mv" wx:if="{{item.type === 0}}">MV</view>
+              <view class="_div data-v-96323eee">{{item.title}}</view>
+            </view>
+            <view class="_div data-v-96323eee d-item">
+              <view class="_div data-v-96323eee time">
+                {{item.durationms | fiexd}}
+              </view>
+              <view class="_div data-v-96323eee user">
+                <view wx:if="{{index > 0}}" class="_div data-v-96323eee">by </view>
+                <view wx:key="index1" key="{{index1}}" wx:for="{{item.creator}}" wx:for-index="index1" wx:for-item="item1" class="_div data-v-96323eee">
+                  {{item1.userName}}
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

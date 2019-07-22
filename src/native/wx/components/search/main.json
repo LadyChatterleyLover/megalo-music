@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-search": "/static/vant/search/index",
+    "van-dialog": "/static/vant/dialog/index",
+    "van-icon": "/static/vant/icon/index",
+    "van-button": "/static/vant/button/index"
+  }
+}

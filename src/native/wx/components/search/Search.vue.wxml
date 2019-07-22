@@ -1,0 +1,46 @@
+<import src="/components/search/SearchPanel.vue.wxml" /><template name="b35af910">
+  <view class="_div data-v-2c1dba4e search">
+    <view class="_div data-v-2c1dba4e">
+      <view class="_div data-v-2c1dba4e s-top">
+        <view class="_div data-v-2c1dba4e s-search">
+          <van-search value="{{value}}" placeholder="请输入搜索关键词" shape="round" bindsearch="handleProxy" bindcancel="handleProxy" bindchange="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-search data-v-2c1dba4e"></van-search>
+        </view>
+        <view class="_div data-v-2c1dba4e s-btn">
+          <view bindtap="handleProxy" wx:if="{{showValue}}" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_div data-v-2c1dba4e">搜索</view>
+          <view bindtap="handleProxy" wx:else data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_div data-v-2c1dba4e">取消</view>
+        </view>
+      </view> <template wx:if="{{showPanel}}" data="{{...$root[$kk+'3'], $root}}" is="d83014c8"></template>
+      <view wx:else class="_div data-v-2c1dba4e">
+        <view class="_div data-v-2c1dba4e history" wx:if="{{showHistory && searchArr.length > 0}}">
+          <view class="_h3 data-v-2c1dba4e"> 搜索历史 </view>
+          <view class="_div data-v-2c1dba4e desc">
+            <view wx:key="index" key="{{index}}" class="_div data-v-2c1dba4e item" bindtap="handleProxy" data-eventid="{{'3_'+index}}" data-comkey="{{$k}}" wx:for="{{searchArr}}" wx:for-index="index" wx:for-item="item">
+              <view class="_div data-v-2c1dba4e name">
+                {{item.name}}
+              </view>
+            </view>
+            <view class="_div data-v-2c1dba4e d-icon" bindtap="handleProxy" style="font-size: 24rpx" data-eventid="{{'4'}}" data-comkey="{{$k}}"> 清空历史 </view>
+            <van-dialog show="{{true}}" show-cancel-button bindconfirm="handleProxy" title="是否清空搜索历史" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_van-dialog data-v-2c1dba4e"></van-dialog>
+            <van-dialog id="van-dialog" class="_van-dialog data-v-2c1dba4e"></van-dialog>
+          </view>
+        </view>
+        <view class="_div data-v-2c1dba4e hot">
+          <view class="_h3 data-v-2c1dba4e"> 热搜榜 </view>
+          <view class="_div data-v-2c1dba4e h-desc">
+            <view class="_div data-v-2c1dba4e h-item" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'6_'+index}}" data-comkey="{{$k}}" wx:for="{{hots}}" wx:for-index="index" wx:for-item="item">
+              <view class="_div data-v-2c1dba4e index {{[index < 3 ? 'hotIndex' : '']}}">
+                {{index + 1}}
+              </view>
+              <view class="_div data-v-2c1dba4e name">
+                <view class="_div data-v-2c1dba4e">
+                  {{item.first}}
+                </view>
+              </view>
+              <view class="_div data-v-2c1dba4e h-hot" wx:if="{{index < 2}}"> hot </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

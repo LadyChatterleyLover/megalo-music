@@ -1,0 +1,35 @@
+<template name="660156ec">
+  <view wx:if="{{content.length > 0}}" class="_div data-v-1262672a">
+    <view class="_div data-v-1262672a top">
+      <view wx:if="{{showMore}}" class="_h3 data-v-1262672a">
+        {{title}}
+      </view>
+      <view wx:else class="_h3 data-v-1262672a">
+        <view class="_div data-v-1262672a flex">
+          <view wx:key="index" key="{{index}}" bindtap="handleProxy" class="_div data-v-1262672a f-item {{[activeIndex === index ? 'active' : '']}}" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{title}}" wx:for-index="index" wx:for-item="item">
+            {{item}}
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-1262672a song">
+        {{desc}}
+      </view>
+    </view>
+    <view class="_div data-v-1262672a content" wx:if="{{!showContent}}">
+      <view wx:key="index" key="{{index}}" class="_div data-v-1262672a item" wx:if="{{activeIndex === 0}}" wx:for="{{content}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-1262672a img" wx:if="{{item.song}}">
+          <image src="{{item.song.album.picUrl}}" alt class="_img data-v-1262672a"></image>
+        </view>
+        <view class="_div data-v-1262672a img" wx:elif="{{item.coverUrl}}">
+          <image src="{{item.coverUrl}}" alt class="_img data-v-1262672a"></image>
+        </view>
+        <view class="_div data-v-1262672a img" wx:else>
+          <image src="{{item.picUrl}}" alt class="_img data-v-1262672a"></image>
+        </view>
+        <view class="_div data-v-1262672a title t-name">
+          {{item.name}}
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

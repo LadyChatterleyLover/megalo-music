@@ -1,0 +1,42 @@
+<template name="05949106">
+  <view class="_div data-v-40d456de container">
+    <view class="_div data-v-40d456de top">
+      <view class="_div data-v-40d456de name">
+        {{detailItem.name}}
+      </view>
+    </view>
+    <view class="_div data-v-40d456de img">
+      <image src="{{detailItem.picUrl}}" alt class="_img data-v-40d456de"></image>
+      <view class="_div data-v-40d456de play">
+        <view class="_div data-v-40d456de p-icon">
+          <van-icon name="play-circle-o" size="32rpx" class="_van-icon data-v-40d456de"></van-icon>
+        </view>
+        <view class="_div data-v-40d456de p-desc" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}"> 随机播放全部 </view>
+      </view>
+    </view>
+    <view class="_div data-v-40d456de content" ref="wrapper">
+      <view class="_div data-v-40d456de w-content">
+        <view class="_div data-v-40d456de c-item" wx:key="index" key="{{index}}" wx:for="{{songs}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-40d456de index">
+            {{index+ 1}}
+          </view>
+          <view class="_div data-v-40d456de con">
+            <view class="_div data-v-40d456de c-name">
+              {{item.name}}
+            </view>
+            <view class="_div data-v-40d456de al" bindtap="handleProxy" data-eventid="{{'1_'+index}}" data-comkey="{{$k}}">
+              <view wx:key="index1" key="{{index1}}" class="_div data-v-40d456de a-name" wx:for="{{item.ar}}" wx:for-index="index1" wx:for-item="item1">
+                {{item1.name}} <label wx:if="{{index1 !== item.ar.length - 1}}" class="_span data-v-40d456de">/</label> <label wx:if="{{index1 === item.ar.length - 1}}" class="_span data-v-40d456de">· </label></view>
+              <view class="_div data-v-40d456de al-name">
+                {{item.al.name}}
+              </view>
+            </view>
+            <view class="_div data-v-40d456de c-icon">
+              <van-icon name="play-circle-o" size="36rpx" class="_van-icon data-v-40d456de"></van-icon>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

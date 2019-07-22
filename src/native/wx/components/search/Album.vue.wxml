@@ -1,0 +1,25 @@
+<template name="dd2fc962">
+  <view class="_div data-v-17b78bce home">
+    <view class="_div data-v-17b78bce content">
+      <view class="_div data-v-17b78bce flex" wx:if="{{albums.length === 0}}">无结果</view>
+      <view wx:else class="_div data-v-17b78bce">
+        <view wx:key="item.id" key="{{item.id}}" class="_div data-v-17b78bce item" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{albums}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-17b78bce img">
+            <image src="{{item.blurPicUrl}}" alt class="_img data-v-17b78bce"></image>
+          </view>
+          <view class="_div data-v-17b78bce desc">
+            <rich-text class="_div data-v-17b78bce name" nodes="{{item.name}}"></rich-text>
+            <view class="_div data-v-17b78bce time">
+              <view wx:key="index1" key="{{index1}}" wx:for="{{item.artists}}" wx:for-index="index1" wx:for-item="item1" class="_div data-v-17b78bce">
+                <rich-text nodes="{{item1.name}}" class="_div data-v-17b78bce"></rich-text>
+              </view>
+              <view class="_div data-v-17b78bce publish">
+                {{item.publishTime}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,59 @@
+<import src="/components/search/Search.vue.wxml" />
+<import src="/components/hone/Card.vue.wxml" /><template name="25572958">
+  <view class="_div data-v-3628a517"><template wx:if="{{showSearch}}" data-eventid="{{'3'}}" data-comkey="{{$k}}" data="{{...$root[$kk+'6'], $root}}" is="b35af910"></template>
+    <view wx:else class="_div data-v-3628a517">
+      <view class="_div data-v-3628a517 top">
+        <view class="_div data-v-3628a517 t-title">
+          <view class="_h3 data-v-3628a517">音乐馆</view>
+        </view>
+        <view class="_div data-v-3628a517 t-search">
+          <van-search value="{{value}}" placeholder="请输入搜索关键词" shape="round" bindfocus="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-search data-v-3628a517"></van-search>
+        </view>
+        <view class="_div data-v-3628a517 t-img">
+          <view bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_div data-v-3628a517">搜索</view>
+          <image src="/icons/music.svg" alt bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_img data-v-3628a517"></image>
+        </view>
+      </view>
+      <view class="_div data-v-3628a517 swiper">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#fff" circular="{{circular}}" class="_swiper data-v-3628a517">
+          <swiper-item wx:key="item.encodeId" key="{{item.encodeId}}" wx:for="{{banners}}" wx:for-index="index" wx:for-item="item" class="_swiper-item data-v-3628a517">
+            <image src="{{item.pic}}" class="_img data-v-3628a517 slide-image"></image>
+          </swiper-item>
+        </swiper>
+      </view>
+      <view class="_div data-v-3628a517 nav">
+        <view class="_div data-v-3628a517 nav-item">
+          <view class="_div data-v-3628a517 name"> 每日推荐 </view>
+          <view class="_div data-v-3628a517 n-icon">
+            <image src="/icons/rili.svg" alt class="_img data-v-3628a517"></image>
+          </view>
+        </view>
+        <view class="_div data-v-3628a517 nav-item">
+          <view class="_div data-v-3628a517 name"> 歌单 </view>
+          <view class="_div data-v-3628a517 n-icon">
+            <image src="/icons/song.svg" alt class="_img data-v-3628a517"></image>
+          </view>
+        </view>
+        <view class="_div data-v-3628a517 nav-item">
+          <view class="_div data-v-3628a517 name"> 排行榜 </view>
+          <view class="_div data-v-3628a517 n-icon">
+            <image src="/icons/rank.svg" alt class="_img data-v-3628a517"></image>
+          </view>
+        </view>
+        <view class="_div data-v-3628a517 nav-item">
+          <view class="_div data-v-3628a517 name"> 电台 </view>
+          <view class="_div data-v-3628a517 n-icon">
+            <image src="/icons/radio.svg" alt class="_img data-v-3628a517"></image>
+          </view>
+        </view>
+        <view class="_div data-v-3628a517 nav-item">
+          <view class="_div data-v-3628a517 name"> 直播 </view>
+          <view class="_div data-v-3628a517 n-icon">
+            <image src="/icons/zhibo.svg" alt class="_img data-v-3628a517"></image>
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-3628a517"><template title="推荐歌单" desc="歌单广场" wx:if="{{rankList.length > 0}}" data="{{...$root[$kk+'2'], $root}}" is="660156ec"></template> <template title="音乐新势力" desc="新音乐" wx:if="{{newMusic.length > 0}}" data="{{...$root[$kk+'3'], $root}}" is="660156ec"></template> <template title="推荐电台" desc="电台广场" wx:if="{{djArr.length > 0}}" data="{{...$root[$kk+'4'], $root}}" is="660156ec"></template> <template title="推荐节目" desc="更多节目" wx:if="{{recommend.length > 0}}" data="{{...$root[$kk+'5'], $root}}" is="660156ec"></template></view>
+    </view>
+  </view>
+</template>

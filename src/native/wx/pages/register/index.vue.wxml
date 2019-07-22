@@ -1,0 +1,20 @@
+<template name="48da6233">
+  <view class="_div data-v-72a9da14">
+    <view class="_div data-v-72a9da14 content">
+      <van-cell-group class="_van-cell-group data-v-72a9da14">
+        <van-field type="tel" left-icon="phone-o" value="{{phone}}" label="手机号" required clearable placeholder="请输入手机号" bindblur="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-field data-v-72a9da14"></van-field>
+        <van-field type="password" value="{{password}}" label="密码" left-icon="photo-o" required clearable placeholder="请输入密码" bindblur="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_van-field data-v-72a9da14"></van-field>
+        <van-field value="{{captcha}}" label="验证码" left-icon="label-o" required clearable placeholder="请输入验证码" bindblur="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_van-field data-v-72a9da14">
+          <van-button type="primary" slot="button" size="small" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_van-button data-v-72a9da14">
+            {{sendValue}}
+          </van-button>
+        </van-field>
+        <van-field value="{{nickname}}" center label="昵称" left-icon="user-o" required clearable placeholder="请输入昵称" bindblur="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_van-field data-v-72a9da14"></van-field>
+      </van-cell-group>
+      <view class="_div data-v-72a9da14 btn">
+        <van-button type="danger" bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_van-button data-v-72a9da14">前往登录</van-button>
+        <van-button type="warning" bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_van-button data-v-72a9da14">立即注册</van-button>
+      </view>
+    </view>
+  </view>
+</template>

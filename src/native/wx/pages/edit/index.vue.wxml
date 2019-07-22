@@ -1,0 +1,57 @@
+<template name="0f51a14c">
+  <view class="_div data-v-60d0808a me">
+    <view class="_div data-v-60d0808a no-login" wx:if="{{!userId}}">
+      <view class="_div data-v-60d0808a n-desc"> 您还没有登录喔 </view>
+      <view class="_div data-v-60d0808a">
+        <van-button type="info" size="small" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_van-button data-v-60d0808a">立即登录</van-button>
+      </view>
+    </view>
+    <view wx:else class="_div data-v-60d0808a">
+      <view class="_div data-v-60d0808a content">
+        <view class="_div data-v-60d0808a img">
+          <image src="{{user.avatarUrl}}" alt class="_img data-v-60d0808a"></image>
+        </view>
+        <view class="_div data-v-60d0808a desc">
+          <view class="_div data-v-60d0808a name">
+            {{user.nickname}}
+          </view>
+          <view class="_div data-v-60d0808a type"> Lv: {{user.userType}}
+          </view>
+        </view>
+        <view class="_div data-v-60d0808a sign">
+          <view wx:if="{{!isSign}}" class="_div data-v-60d0808a s-item" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}">签到</view>
+          <view wx:else class="_div data-v-60d0808a s-item">已签到</view>
+        </view>
+      </view>
+      <view class="_div data-v-60d0808a container">
+        <view class="_div data-v-60d0808a c-item">
+          <view class="_div data-v-60d0808a num">
+            {{dynamic}}
+          </view>
+          <view class="_div data-v-60d0808a title"> 动态 </view>
+        </view>
+        <view class="_div data-v-60d0808a c-item">
+          <view class="_div data-v-60d0808a num">
+            {{follow}}
+          </view>
+          <view class="_div data-v-60d0808a title"> 关注 </view>
+        </view>
+        <view class="_div data-v-60d0808a c-item">
+          <view class="_div data-v-60d0808a num">
+            {{fans}}
+          </view>
+          <view class="_div data-v-60d0808a title"> 粉丝 </view>
+        </view>
+        <view class="_div data-v-60d0808a c-item" bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}">
+          <view class="_div data-v-60d0808a num">
+            <van-icon name="edit" size="20px" class="_van-icon data-v-60d0808a"></van-icon>
+          </view>
+          <view class="_div data-v-60d0808a title"> 编辑资料 </view>
+        </view>
+      </view>
+      <view class="_div data-v-60d0808a btn1">
+        <van-button type="warning" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_van-button data-v-60d0808a">退出登录</van-button>
+      </view>
+    </view>
+  </view>
+</template>

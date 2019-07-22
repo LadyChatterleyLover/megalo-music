@@ -1,0 +1,23 @@
+<template name="d05c9330">
+  <view class="_div data-v-1e2126e7">
+    <view class="_div data-v-1e2126e7 content">
+      <view class="_div data-v-1e2126e7 flex" wx:if="{{users.length === 0}}">无结果</view>
+      <view wx:else class="_div data-v-1e2126e7">
+        <view class="_div data-v-1e2126e7 item" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{users}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-1e2126e7 img">
+            <image src="{{item.avatarUrl}}" alt class="_img data-v-1e2126e7"></image>
+          </view>
+          <view class="_div data-v-1e2126e7 desc">
+            <rich-text class="_div data-v-1e2126e7 name" nodes="{{item.nickname}}"></rich-text>
+            <view wx:if="{{item.signature !== ''}}" class="_div data-v-1e2126e7 signature">
+              {{item.signature}}
+            </view>
+          </view>
+          <view class="_div data-v-1e2126e7 btn">
+            <van-button round type="danger" size="mini" class="_van-button data-v-1e2126e7">+ 关注</van-button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

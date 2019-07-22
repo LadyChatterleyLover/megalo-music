@@ -1,0 +1,10 @@
+<import src="/components/search/Search.vue.wxml" />
+<import src="/components/hone/Card.vue.wxml" />
+<import src="/components/singer/SingerList.vue.wxml" />
+<import src="/components/search/Album.vue.wxml" />
+<import src="/components/search/Singer.vue.wxml" />
+<import src="/components/search/Sheet.vue.wxml" />
+<import src="/components/search/Users.vue.wxml" />
+<import src="/components/search/Videos.vue.wxml" />
+<import src="/components/search/Radio.vue.wxml" />
+<import src="/components/search/SearchPanel.vue.wxml" />

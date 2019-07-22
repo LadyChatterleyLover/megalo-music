@@ -1,0 +1,22 @@
+<template name="3b09fb82">
+  <view class="_div data-v-68ca72be">
+    <view class="_div data-v-68ca72be flex" wx:if="{{sheet.length === 0}}">无结果</view>
+    <view wx:else class="_div data-v-68ca72be">
+      <view class="_div data-v-68ca72be item" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{sheet}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-68ca72be img">
+          <image src="{{item.coverImgUrl}}" alt class="_img data-v-68ca72be"></image>
+        </view>
+        <view class="_div data-v-68ca72be desc">
+          <rich-text class="_div data-v-68ca72be name" nodes="{{item.name}}"></rich-text>
+          <view class="_div data-v-68ca72be d-item">
+            <view class="_div data-v-68ca72be count">
+              {{item.trackCount}}首音乐 </view>
+            <view class="_div data-v-68ca72be user"> by{{item.creator.nickname}}
+            </view>
+            <view class="_div data-v-68ca72be play"> 播放{{item.playCount}}万次 </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

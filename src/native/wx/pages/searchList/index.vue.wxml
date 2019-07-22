@@ -1,0 +1,53 @@
+<import src="/components/search/Album.vue.wxml" />
+<import src="/components/search/Singer.vue.wxml" />
+<import src="/components/search/Sheet.vue.wxml" />
+<import src="/components/search/Users.vue.wxml" />
+<import src="/components/search/Videos.vue.wxml" />
+<import src="/components/search/Radio.vue.wxml" /><template name="0f4a4e14">
+  <scroll-view scroll-y class="_scroll-view data-v-27a846d2">
+    <view class="_div data-v-27a846d2 wrapper">
+      <view class="_div data-v-27a846d2 w-content">
+        <view class="_div data-v-27a846d2 top">
+          <view class="_div data-v-27a846d2 t-search">
+            <van-search value="{{value}}" class="_van-search data-v-27a846d2"></van-search>
+          </view>
+        </view>
+        <view class="_div data-v-27a846d2 container">
+          <van-tabs active="{{active}}" swipeable="{{true}}" animated="{{true}}" class="_van-tabs data-v-27a846d2">
+            <van-tab title="单曲" class="_van-tab data-v-27a846d2">
+              <view class="_div data-v-27a846d2 content">
+                <view class="_div data-v-27a846d2 all">
+                  <van-icon name="play-circle-o" size="36rpx" class="_van-icon data-v-27a846d2"></van-icon>
+                  <view class="_div data-v-27a846d2">播放全部</view>
+                </view>
+                <view class="_div data-v-27a846d2 item" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{searchSongs}}" wx:for-index="index" wx:for-item="item">
+                  <view class="_div data-v-27a846d2">
+                    <view class="_div data-v-27a846d2 name">
+                      {{item.name}}
+                    </view>
+                    <view class="_div data-v-27a846d2 i-desc">
+                      <view wx:key="index1" key="{{index1}}" class="_div data-v-27a846d2 d-name" wx:for="{{item.artists}}" wx:for-index="index1" wx:for-item="item1">
+                        <rich-text nodes="{{item1.name}}" class="_rich-text data-v-27a846d2"></rich-text>  <label wx:if="{{index1 !== item.artists.length - 1}}" class="_span data-v-27a846d2">/ </label>
+                      </view>
+                      <view class="_div data-v-27a846d2 i-name">  - {{item.album.name}}
+                      </view>
+                    </view>
+                  </view>
+                  <view class="_div data-v-27a846d2 icon">
+                    <van-icon name="play-circle-o" size="36rpx" class="_van-icon data-v-27a846d2"></van-icon>
+                  </view>
+                </view>
+              </view>
+            </van-tab>
+            <van-tab title="专辑" class="_van-tab data-v-27a846d2"><template data="{{...$root[$kk+'5'], $root}}" is="dd2fc962"></template></van-tab>
+            <van-tab title="歌手" class="_van-tab data-v-27a846d2"><template data="{{...$root[$kk+'7'], $root}}" is="0834d168"></template></van-tab>
+            <van-tab title="歌单" class="_van-tab data-v-27a846d2"><template data="{{...$root[$kk+'9'], $root}}" is="3b09fb82"></template></van-tab>
+            <van-tab title="用户" class="_van-tab data-v-27a846d2"><template data="{{...$root[$kk+'11'], $root}}" is="d05c9330"></template></van-tab>
+            <van-tab title="视频" class="_van-tab data-v-27a846d2"><template data="{{...$root[$kk+'13'], $root}}" is="71484128"></template></van-tab>
+            <van-tab title="电台" class="_van-tab data-v-27a846d2"><template data="{{...$root[$kk+'15'], $root}}" is="48b50adb"></template></van-tab>
+          </van-tabs>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</template>
