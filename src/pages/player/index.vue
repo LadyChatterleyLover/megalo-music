@@ -308,7 +308,6 @@
     },
     onLoad (options) {
       let detailId = options.detailId
-      this.currentIndex = options.index
       this.alId = options.alId
       wx.showLoading({
         title: '加载中...'
@@ -318,18 +317,34 @@
           wx.hideLoading()
           this.songs = res.data.hotSongs
           if (options.isSearch === '1') {
-            // let arr = res.data.hotSongs.filter(item => {
-            //   return item.name = options.music
-            // })
-            // this.song = arr[0]
-            this.$set(this.song, 'id', options.id)
-            this.$set(this.song, 'al', {})
-            this.$set(this.song.al, 'id', options.alId)
+            wx.showLoading({
+              title: '加载中...'
+            })
+            this.$fly.get(`/search?keywords=${this.$store.state.keywords}&limit=50`)
+                .then(res => {
+                  let result = res.data.result.songs
+                  if (result.length > 0) {
+                    wx.hideLoading()
+                    this.songs = result
+                    this.currentIndex = options.index
+                    console.log(result)
+                    console.log(this.currentIndex)
+                    console.log(result[this.currentIndex])
+                    this.song = result[this.currentIndex]
+                    this.getSongUrl()
+                    this.getAlPic()
+                  }
+                }).catch(err => {
+              console.log(err)
+            })
+
           } else {
+            this.currentIndex = options.index
             this.song = res.data.hotSongs[this.currentIndex]
+            this.getSongUrl()
+            this.getAlPic()
           }
-          this.getSongUrl()
-          this.getAlPic()
+
         }
       }).catch(err => {
         console.log(err)

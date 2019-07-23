@@ -132,7 +132,6 @@
     },
     methods: {
       play(item, index) {
-        console.log(item)
         this.$fly.get(`/song/detail?ids=${item.id}`).then(res => {
           if (res.data.code === 200) {
             let song = res.data.songs[0]
@@ -237,6 +236,7 @@
     onLoad(options) {
       this.searchSongs = options.searchSongs
       this.value = options.searchValue
+      this.$store.state.keywords = options.searchValue
     },
     mounted() {
     },

@@ -14,4 +14,5 @@ export default {
   searchValue: '', // 搜索关键词，
   albumId: '', // 专辑id
   sheetId: '', // 歌单id
+  keywords: '', // 搜索关键词
 }
