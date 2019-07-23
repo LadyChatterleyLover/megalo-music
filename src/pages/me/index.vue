@@ -91,7 +91,6 @@
     props: {},
     data() {
       return {
-        user: null,
         isSign: false, // 是否签到
         dynamic: 0, // 动态
         follow: 0, // 关注
@@ -123,9 +122,6 @@
             this.$store.state.user = null
             wx.removeStorageSync('user')
             wx.removeStorageSync('userId')
-            wx.switchTab({
-              url: '../index/Index'
-            })
             wx.showToast({
               title: '退出成功'
             
@@ -164,18 +160,9 @@
           url: '../edit/index'
         })
       },
-      getUser() {
-        this.$fly.get(`/user/detail?uid=${this.userId}`).then(res => {
-          if (res.data) {
-            this.user = res.data.profile
-            this.isSign = res.pcSign
-            wx.setStorageSync('user', JSON.stringify(res.profile))
-          }
-        })
-      }
     },
     mounted() {
-
+      console.log(this.$store.state.user)
     },
     created() {
       if (wx.getStorageSync('userId') !==''){
@@ -183,12 +170,13 @@
         this.getDynamic()
         this.getFollow()
         this.getFans()
-        this.getUser()
       }
     },
     filters: {},
     computed: {
-
+      user () {
+        return this.$store.state.user
+      }
     },
     watch: {},
     directives: {}

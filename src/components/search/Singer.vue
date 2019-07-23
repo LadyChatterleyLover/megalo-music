@@ -52,11 +52,6 @@
         .then(res => {
           this.singer = res.data.result.artists
           this.showLoading = false
-          this.singer.map(item => {
-            let replaceReg = new RegExp(this.value, 'g')
-            let replaceString = '<span class="search-text">' + this.value + '</span>'
-            item.name = item.name.replace(replaceReg, replaceString)
-          })
         })
     },
     created() {

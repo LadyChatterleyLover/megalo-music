@@ -49,11 +49,6 @@
       this.$fly.get(`/search?keywords=${this.value}&type=1009&limit=50`)
         .then(res => {
           this.radios = res.data.result.djRadios
-          this.radios.map(item => {
-            let replaceReg = new RegExp(this.value, 'g')
-            let replaceString = '<span class="search-text">' + this.value + '</span>'
-            item.name = item.name.replace(replaceReg, replaceString)
-          })
         })
     },
     created() {

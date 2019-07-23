@@ -9,7 +9,7 @@
 
 <template>
   <div>
-    <search v-if="showSearch" :showSearch.sync="showSearch"></search>
+    <search v-if="showSearch" @update="update" :showSearch.sync="showSearch"></search>
     <div v-else>
       <div class="top">
         <div class="t-title">
@@ -119,6 +119,9 @@
       }
     },
     methods: {
+      update (data) {
+        this.showSearch = data
+      },
       getBanner() {
         this.$fly.get('/banner?type=2').then(response => {
           let res = response.data

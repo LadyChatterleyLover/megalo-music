@@ -58,11 +58,6 @@
           this.albums.map(item => {
             item.publishTime = this.$moment(item.publishTime).format('YYYY-MM-DD')
             let replaceReg = new RegExp(this.value, 'g')
-            let replaceString = '<div class="search-text">' + this.value + '</div>'
-            item.name = item.name.replace(replaceReg, replaceString)
-            item.artists.map(item1 => {
-              item1.name = item1.name.replace(replaceReg, replaceString)
-            })
           })
         })
     },

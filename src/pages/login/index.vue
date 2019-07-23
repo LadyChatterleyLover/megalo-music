@@ -128,11 +128,10 @@
         this.$fly.get(`/login/cellphone?phone=${this.phone}&password=${this.password}`)
           .then(res => {
             console.log(res)
-            if (res.data) {
-              let user = res.data.profile
-              wx.setStorageSync('user', JSON.stringify(user))
-              wx.setStorageSync('userId', user.userId)
-              this.$store.state.user = user
+            if (res.data.code === 200) {
+              wx.setStorageSync('user', JSON.stringify(res.data.profile))
+              wx.setStorageSync('userId', res.data.profile.userId)
+              this.$store.state.user = res.data.profile
               wx.showToast({
                 title: '登录成功',
                 icon: 'success'
@@ -143,6 +142,7 @@
             }
           }).catch(err => {
           if (err) {
+            console.log(err)
             wx.showToast({
               title: '账号或密码错误',
               icon: 'none'
@@ -168,10 +168,9 @@
         this.$fly.get(`/login/email?email=${this.email}&password=${this.password2}`)
           .then(res => {
             if (res.data) {
-              let user = res.data.profile
-              wx.setStorageSync('user', JSON.stringify(user))
-              wx.setStorageSync('userId', user.userId)
-              this.$store.state.user = user
+              wx.setStorageSync('user', JSON.stringify(res.data.profile))
+              wx.setStorageSync('userId', res.data.profile.userId)
+              this.$store.state.user = res.data.profile
               wx.showToast({
                 title: '登录成功',
                 icon: 'success'

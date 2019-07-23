@@ -80,13 +80,13 @@
         })
       },
       playAll () {
+        let detailId = this.detailItem.id
         let index = parseInt(Math.random() * this.songs.length)
         let item = this.songs[index]
-        let url = `../player/index?item=${item}&index=${index}&songs=${this.songs}`
+        let url = `../player/index?id=${item.id}&alId=${item.al.id}&detailId=${detailId}&index=${index}&name=${item.name}`
         wx.navigateTo({
           url
         })
-        // this.$router.push({name: 'player', params: {item: item,index: index, songs: this.songs}})
       }
     },
     mounted() {

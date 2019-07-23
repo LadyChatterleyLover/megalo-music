@@ -55,10 +55,6 @@
           this.sheet = res.data.result.playlists
           this.sheet.map(item => {
             item.publishTime = this.$moment(item.publishTime).format('YYYY-MM-DD')
-            let replaceReg = new RegExp(this.value, 'g')
-            let replaceString = '<span class="search-text">' + this.value + '</span>'
-            item.name = item.name.replace(replaceReg, replaceString)
-            item.playCount = item.playCount.toString().substr(0,2) + '.' + item.playCount.toString().substr(2,1)
           })
         })
     },

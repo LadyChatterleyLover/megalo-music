@@ -152,7 +152,7 @@
         wx.setStorageSync('searchArr', JSON.stringify(arr))
       },
       onCancel() {
-        this.$emit('update:showSearch', false)
+        this.$emit('update', false)
       },
       clearHistory() {
         wx.showModal({
@@ -205,7 +205,7 @@
         }
       }
     },
-    onShow () {``
+    onShow () {
       if (wx.getStorageSync('searchArr')) {
         this.searchArr = JSON.parse(wx.getStorageSync('searchArr'))
       }

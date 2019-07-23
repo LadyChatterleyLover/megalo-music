@@ -1,8 +1,6 @@
 import Vuex from 'vuex'
-import counter from './counter'
+import state from './state'
 
 export default new Vuex.Store({
-  modules: {
-    counter
-  }
+  state
 })

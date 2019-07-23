@@ -131,15 +131,21 @@
       }
     },
     methods: {
-      back() {
-        this.$router.back()
-      },
       play(item, index) {
-        this.$store.state.detailItem.name = item.ar
+        console.log(item)
         this.$fly.get(`/song/detail?ids=${item.id}`).then(res => {
-          if (res.code === 200) {
-            let song = res.songs[0]
-            this.$router.push({name: 'player', params: {item: song, index: index, songs: this.searchSongs}})
+          if (res.data.code === 200) {
+            let song = res.data.songs[0]
+            let detailId = item.artists[0].id
+            let name = item.artists
+            this.$store.state.detailItem.name = item.artists
+            let id = item.id
+            let alId = song.al.id
+            let url = `../player/index?id=${id}&alId=${alId}&detailId=${detailId}&index=${index}&name=${name}&isSearch=1&music=${item.name}`
+            wx.navigateTo({
+              url
+            })
+
           }
         })
       },
@@ -233,14 +239,6 @@
       this.value = options.searchValue
     },
     mounted() {
-
-      this.searchSongs.map(item => {
-        item.artists.map(item1 => {
-          let replaceReg = new RegExp(this.value, 'g');
-          let replaceString = '<span class="search-text">' + this.value + '</span>';
-          item1.name = item1.name.replace(replaceReg, replaceString);
-        })
-      })
     },
     created() {
 

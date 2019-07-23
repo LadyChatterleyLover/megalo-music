@@ -52,8 +52,8 @@ export default {
         {
           "text": "歌手",
           "pagePath": "pages/singer/index",
-          "iconPath": "native/tabs/singer.png",
-          "selectedIconPath": "native/tabs/singer-active.png"
+          "iconPath": "native/tabs/sing.png",
+          "selectedIconPath": "native/tabs/sing-active.png"
         },
         {
           "text": "我的",
